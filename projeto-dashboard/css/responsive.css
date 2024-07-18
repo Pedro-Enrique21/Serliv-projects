@@ -1,0 +1,8 @@
+@media screen and (width > 1440px) {
+    main {
+        /* background-color: red; */
+        margin: auto;
+        grid-template-rows: 88px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* GAPS */
+    --gap-dashvalue: 1rem;
+
+    /* COLORS */
+    --colorLinksAndUser: rgb(0 0 0 / .8);
+}
+
+html {
+    font-family: poppins;
+}
+
+body {
+    height: 100vh;
+    background-color: #f8f8f8;
+    /* overflow: hidden; */
+}
+
+svg {
+    width: 34px;
+    height: 32px;
+    /* background-color: orange; */
+
+}
+
+img {
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 240px 1fr 1fr;
+    grid-template-rows: 4rem 1fr 1fr;
+    height: 100%;
+}
+
+.header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    gap: 6em
+}
+
+.header h1 {
+    font-weight: 500;
+}
+
+.header nav {
+    display: flex;
+    flex-grow: 1;
+    gap: 2.6em;
+}
+
+.header nav a {
+    display: flex;
+    align-items: center;
+    gap: 1.4em;
+    color: black;
+    text-decoration: none;
+    /* background-color: red; */
+    color: var(--colorLinksAndUser);
+    fill: var(--colorLinksAndUser);
+}
+
+.profile {
+    transition: color .5s, fill .5s;
+}
+
+.profile:hover {
+    color: gray;
+    fill: gray;
+}
+
+.setting {
+    transition: all .5s;
+}
+
+.setting svg {
+    width: 2em;
+    /* background-color: red; */
+    transition: transform 1s;
+}
+
+.setting:hover {
+    color: gray;
+    fill: gray;
+}
+
+.setting:hover svg {
+    transform: rotate(90deg);
+}
+
+
+.user {
+    display: flex;
+    flex-direction: column;
+    font-size: .8em;
+    color: var(--colorLinksAndUser);
+}
+
+.header-vertical {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    background-color: white;
+}
+
+.header-vertical nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.distributed-div {
+    border-bottom: 1px solid rgb(0 0 0 / .4);
+}
+
+.nav-link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 1.6em .6em;
+    color: var(--colorLinksAndUser);
+    fill: var(--colorLinksAndUser);
+    text-decoration: none;
+    transition-property: color, fill;
+    transition-duration: .5s, .5s;
+    width: 60%;
+    margin: .8em auto;
+    height: 2em;
+
+}
+
+.nav-link:hover {
+    color: gray;
+    fill: gray;
+}
+
+main {
+    grid-column: 2 / 4;
+    grid-row: span 3;
+    display: grid;
+    grid-column: 1fr 1fr;
+    height: fit-content;
+    margin: 2em;
+    gap: 2em;
+    width: 1117px;
+    /* 
+    background-color: red; */
+    grid-template-columns: 542px 542px;
+    /* grid-template-rows: 88px 1fr 1fr; */
+}
+
+.mainSection1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: .4em;
+    padding: 1rem 0;
+}
+
+.dashValue {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-dashvalue);
+}
+
+.dashValue:not(.announced) {
+    padding: 1em calc(51px + (2rem - var(--gap-dashvalue) * 2) / 4);
+}
+
+.dashValue:not(.sorted, .announced) {
+    border-right: 1px solid rgb(0 0 0 / .4);
+}
+
+.announced {
+    padding: 1em calc(51px + (2rem - var(--gap-dashvalue) * 2) / 4) 1em 0;
+    border-right: 1px solid rgb(0 0 0 / .4);
+}
+
+.main-section1_link a {
+    padding: 1em 3em;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: .2em;
+    transition: border-radius .5s, background-color .5s;
+}
+
+.main-section1_link a:hover {
+    border-radius: .6em;
+    background-color: hsl(240, 100%, 35%);
+}
+
+.dashValue_value {
+    color: blue;
+    font-size: 1.6em;
+}
+
+.mainSection2 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 329px 329px;
+    gap: 1em;
+}
+
+.announcedImg {
+    grid-column: 1 / 3;
+}
+
+.divimg {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    gap: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto-fit, repeat(2, 1fr);
+    height: fit-content;
+}
